@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100b20">
+<title>C7PL • Kali Puja & Diwali 2026</title>
+<style>
+:root{--gold:#f6ca78;--gold2:#ffdf9b;--bg:#0b0817;--panel:#17112a;--muted:#c9bdd8;--pink:#e5a4d2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#43204e 0,#160d2a 38%,#090713 78%);color:#fff;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;overflow-x:hidden}
+#sparkles{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.45}.wrap{position:relative;z-index:1;max-width:1100px;margin:auto;padding:18px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 18px}.brand{font-weight:900;letter-spacing:2px;color:var(--gold);font-size:1.15rem}.tag{border:1px solid #8b6b9d;border-radius:99px;padding:7px 12px;color:#f4d8ff;font-size:.78rem}
+.hero{position:relative;overflow:hidden;border:1px solid #8b673d;border-radius:26px;padding:clamp(24px,6vw,64px) 22px;text-align:center;background:linear-gradient(110deg,rgba(10,7,22,.94),rgba(36,13,48,.78)),url('assets/c7pl_team_photo_watermarked.jpg') center 36%/cover;box-shadow:0 20px 70px #0008}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,#f5c66a20,transparent 55%);pointer-events:none}.hero>*{position:relative;z-index:1}.eyebrow{color:var(--gold);letter-spacing:3px;font-size:.78rem;font-weight:800}.hero h1{font-size:clamp(2rem,7vw,4.5rem);line-height:1.12;margin:14px 0 8px;text-shadow:0 4px 22px #000}.hero p{color:#f3e8f5;margin:10px auto;max-width:650px}.gold{color:var(--gold2)}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:620px;margin:28px auto 14px}.time{background:#100b20d9;border:1px solid #a67a4e;border-radius:16px;padding:14px 6px;backdrop-filter:blur(8px)}.time b{display:block;font-size:clamp(1.6rem,5vw,2.5rem);color:var(--gold2);font-variant-numeric:tabular-nums}.time span{font-size:.76rem;color:#d9cadd}.date{font-size:.9rem;color:#f5dba9}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{border:0;border-radius:99px;padding:12px 18px;font-weight:800;background:linear-gradient(135deg,#ffe1a0,#bd812e);color:#24132b;cursor:pointer;text-decoration:none}.btn.alt{background:#ffffff12;color:#fff;border:1px solid #8b6b9d}.section{margin:24px 0;background:#17112ac9;border:1px solid #574064;border-radius:22px;padding:22px;backdrop-filter:blur(10px)}.section h2{margin:0 0 14px;color:var(--gold2);font-size:1.35rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{background:linear-gradient(145deg,#251633,#130f22);border:1px solid #60446d;border-radius:17px;padding:17px}.card .emoji{font-size:2rem}.card h3{margin:8px 0;color:#ffe0a2}.card p{color:var(--muted);font-size:.92rem;line-height:1.55}.photo{width:100%;display:block;border-radius:15px;border:1px solid #a77b4d}.gamebox{text-align:center}.lamp{font-size:3rem;display:inline-block;cursor:pointer;user-select:none;filter:drop-shadow(0 0 12px #ffbf4b);transition:transform .1s}.lamp:active{transform:scale(.85)}.score{font-size:1.1rem;color:var(--gold2);font-weight:800}.quiz button{margin:5px}.quiz .btn{border-radius:12px}.footer{text-align:center;padding:28px 10px 40px;color:#bbaec8;font-size:.82rem}.watermark{position:fixed;right:12px;bottom:10px;z-index:5;color:#ffe1a0;background:#130d23c9;border:1px solid #a77b4d;border-radius:9px;padding:6px 10px;font-size:11px;letter-spacing:1px;font-weight:900;pointer-events:none}
+@media(max-width:520px){.wrap{padding:12px}.countdown{gap:6px}.time{padding:11px 3px}.time span{font-size:.68rem}.section{padding:17px}.tag{font-size:.68rem}}
+</style></head>
+<body><canvas id="sparkles"></canvas><div class="wrap">
+<nav><div class="brand">🏏 C7PL</div><div class="tag">FESTIVAL SPECIAL • 2026</div></nav>
+<header class="hero">
+<div class="eyebrow">C7PL FAMILY PRESENTS</div>
+<h1>শুভ <span class="gold">কালীপুজো</span><br>ও দীপাবলি ২০২৬ 🪔</h1>
+<p>আলো, আনন্দ আর ক্রিকেটের বন্ধনে — C7PL-এর সকল প্লেয়ার, পরিবার ও বন্ধুদের জানাই আন্তরিক শুভেচ্ছা।</p>
+<div class="date">📅 ৮ নভেম্বর ২০২৬ • রবিবার</div>
+<div class="countdown" aria-label="Countdown">
+<div class="time"><b id="days">--</b><span>দিন</span></div><div class="time"><b id="hours">--</b><span>ঘণ্টা</span></div><div class="time"><b id="mins">--</b><span>মিনিট</span></div><div class="time"><b id="secs">--</b><span>সেকেন্ড</span></div>
+</div><div id="countmsg" class="date">উৎসবের কাউন্টডাউন চলছে…</div>
+<div class="actions"><button class="btn" onclick="shareWish()">💌 শুভেচ্ছা শেয়ার</button><a class="btn alt" href="#games">🎮 Mini Games</a></div>
+</header>
+<section class="section"><h2>🌟 C7PL Team Moments</h2><img class="photo" src="assets/c7pl_team_photo_watermarked.jpg" alt="C7PL team photo with C7PL watermark"><p style="color:#cdbfd7;text-align:center;margin-bottom:0">এক দল, এক পরিবার — C7PL ❤️</p></section>
+<section class="section"><h2>🪔 উৎসবের শুভেচ্ছা</h2><div class="grid">
+<div class="card"><div class="emoji">🙏</div><h3>শুভ কালীপুজো</h3><p>মা কালীর আশীর্বাদে সকলের জীবন ভরে উঠুক শান্তি, সাহস ও মঙ্গলময়তায়।</p></div>
+<div class="card"><div class="emoji">✨</div><h3>শুভ দীপাবলি</h3><p>আলোর উৎসব সবার ঘরে নিয়ে আসুক আনন্দ, ভালোবাসা ও নতুন স্বপ্ন।</p></div>
+<div class="card"><div class="emoji">🏏</div><h3>C7PL Family</h3><p>মাঠে থাকুক বন্ধুত্ব, খেলায় থাকুক স্পিরিট, আর প্রতিটি মুহূর্ত হোক স্মরণীয়।</p></div>
+</div></section>
+<section class="section" id="games"><h2>🎮 C7PL Festival Mini Games</h2><div class="grid">
+<div class="card gamebox"><div class="emoji">🪔</div><h3>দিয়া ট্যাপ চ্যালেঞ্জ</h3><p>১৫ সেকেন্ডে যতবার পারো প্রদীপে ট্যাপ করো!</p><div class="score">স্কোর: <span id="score">0</span> | সময়: <span id="timer">15</span>s</div><div id="lamp" class="lamp" role="button" tabindex="0" onclick="tapLamp()">🪔</div><div><button class="btn" id="start" onclick="startGame()">গেম শুরু</button></div><p id="gameMsg">শুরু করতে বোতামে চাপ দাও।</p></div>
+<div class="card quiz gamebox"><div class="emoji">🏏</div><h3>C7PL Festival Quiz</h3><p id="question">কালীপুজো ২০২৬ কোন তারিখে?</p><div id="answers"><button class="btn alt" onclick="answer(0)">৮ নভেম্বর</button><button class="btn alt" onclick="answer(1)">১৫ নভেম্বর</button></div><p id="quizMsg">সঠিক উত্তর বেছে নাও!</p><button class="btn" onclick="nextQuestion()">পরের প্রশ্ন</button></div>
+</div></section>
+<section class="section"><h2>📣 সকল C7PL প্লেয়ারের জন্য</h2><p style="color:#e7dced;line-height:1.8">প্রিয় C7PL প্লেয়াররা, তোমাদের সবাইকে জানাই শুভ কালীপুজো ও শুভ দীপাবলি। আমাদের বন্ধুত্ব, ঐক্য ও ক্রিকেটের ভালোবাসা আরও দৃঢ় হোক। নিরাপদে ও আনন্দের সঙ্গে উৎসব পালন করো।</p><button class="btn" onclick="shareWish()">WhatsApp-এ শুভেচ্ছা পাঠাও</button></section>
+<footer class="footer">Made with ❤️ for C7PL Players<br>© C7PL 2026 • Festival Celebration Web App</footer>
+</div>
+<script>
+const target=new Date('2026-11-08T00:00:00+05:30').getTime();
+function tick(){let d=target-Date.now();if(d<=0){['days','hours','mins','secs'].forEach(x=>document.getElementById(x).textContent='0');document.getElementById('countmsg').textContent='🎉 শুভ কালীপুজো ও দীপাবলি! উৎসবের আনন্দ উপভোগ করো!';return}
+let day=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);
+document.getElementById('days').textContent=day;document.getElementById('hours').textContent=String(h).padStart(2,'0');document.getElementById('mins').textContent=String(m).padStart(2,'0');document.getElementById('secs').textContent=String(s).padStart(2,'0')}
+tick();setInterval(tick,1000);
+function shareWish(){let t='🪔 শুভ কালীপুজো ও দীপাবলি ২০২৬! C7PL পরিবারের সকল প্লেয়ার ও বন্ধুদের জানাই অনেক শুভেচ্ছা। ❤️🏏';if(navigator.share)navigator.share({title:'C7PL Kali Puja 2026',text:t,url:location.href}).catch(()=>{});else window.open('https://wa.me/?text='+encodeURIComponent(t+' '+location.href),'_blank')}
+let score=0,time=15,active=false,interval;function startGame(){clearInterval(interval);score=0;time=15;active=true;document.getElementById('score').textContent=score;document.getElementById('timer').textContent=time;document.getElementById('gameMsg').textContent='চালিয়ে যাও!';document.getElementById('start').disabled=true;interval=setInterval(()=>{time--;document.getElementById('timer').textContent=time;if(time<=0){clearInterval(interval);active=false;document.getElementById('start').disabled=false;document.getElementById('gameMsg').textContent='দারুণ! তোমার স্কোর '+score+' 🏆';}},1000)}
+function tapLamp(){if(!active)return;score++;document.getElementById('score').textContent=score;document.getElementById('lamp').textContent=score%2?'🪔':'✨'}document.getElementById('lamp').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')tapLamp()});
+const qs=[['কালীপুজো ২০২৬ কোন তারিখে?',['৮ নভেম্বর','১৫ নভেম্বর'],0],['C7PL কোন খেলার সঙ্গে যুক্ত?',['ক্রিকেট','ফুটবল'],0],['দীপাবলির প্রতীক কী?',['দিয়া/প্রদীপ','বরফ'],0]];
+let qi=0;function renderQ(){document.getElementById('question').textContent=qs[qi][0];document.getElementById('answers').innerHTML=qs[qi][1].map((a,i)=>`<button class="btn alt" onclick="answer(${i})">${a}</button>`).join('');document.getElementById('quizMsg').textContent='সঠিক উত্তর বেছে নাও!'}
+function answer(i){document.getElementById('quizMsg').textContent=i===qs[qi][2]?'✅ একদম ঠিক!':'❌ আবার চেষ্টা করো!'}
+function nextQuestion(){qi=(qi+1)%qs.length;renderQ()}
+const c=document.getElementById('sparkles'),ctx=c.getContext('2d');let pts=[];function resize(){c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:65},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.8+.4,a:Math.random(),v:Math.random()*.012+.003}))}function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);pts.forEach(p=>{p.a+=p.v;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,210,130,${.2+.5*Math.abs(Math.sin(p.a))})`;ctx.fill();p.y-=.12;if(p.y<0)p.y=innerHeight});requestAnimationFrame(draw)}addEventListener('resize',resize);resize();draw();
+</script></body></html>
